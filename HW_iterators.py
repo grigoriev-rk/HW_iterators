@@ -28,8 +28,8 @@ class FlatIterator:                             #Creating iteration class
         return self.lst[self.cursor][self.nested_cursor - 1]
 
 
-def flat_generator(list: list) -> list:         #Generator func with one nesting level
-    return [x for sublist in list for x in sublist]
+#def flat_generator(list: list) -> list:         #Generator func with one nesting level
+#    return [x for sublist in list for x in sublist]
 
 if __name__ == '__main__':                      
     
@@ -38,8 +38,9 @@ if __name__ == '__main__':
     flat_list = [item for item in FlatIterator(nested_list)]
     print(flat_list)
     
-    for item in flat_generator(nested_list):    #Output elements from nested_list flatted by generator
-        print(item)
+#    for item in flat_generator(nested_list):    #Output elements from nested_list flatted by generator
+#        print(item)
 
-
+flat_list_1 = [x for sub in nested_list for x in sub]
+print(flat_list_1)
 
